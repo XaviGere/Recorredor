@@ -19,6 +19,7 @@ from sim.config import RobotConfig
 from sim.world import (
     create_custom_room,
     create_diamond_room,
+    create_figura_743_room,
     create_hexagonal_room,
     create_l_shaped_ortho_room,
     create_pentagonal_room,
@@ -183,6 +184,8 @@ def build_simulation_payload(
         room = create_hexagonal_room()
     elif room_type == "octagon":
         room = create_diamond_room()
+    elif room_type == "figura_743":
+        room = create_figura_743_room()
     else:
         room = create_rectangular_room(4.0, 3.0)
 
@@ -471,6 +474,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <option value="trapezoid">4. Habitación Trapezoidal</option>
         <option value="hexagon">5. Aula Hexagonal (6 Paredes)</option>
         <option value="octagon">6. Salón Octogonal</option>
+        <option value="figura_743">7. Galpón Escalonado (14 Paredes)</option>
         <option value="custom">✏️ Figura Personalizada Actual</option>
       </optgroup>
       <optgroup label="Mis Figuras Guardadas" id="savedGroup"></optgroup>

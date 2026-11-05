@@ -9,6 +9,7 @@ from sim.config import RobotConfig
 from sim.world import (
     create_custom_room,
     create_diamond_room,
+    create_figura_743_room,
     create_hexagonal_room,
     create_l_shaped_ortho_room,
     create_pentagonal_room,
@@ -67,6 +68,8 @@ def build_simulation_payload(
         room = create_hexagonal_room()
     elif room_type == "octagon":
         room = create_diamond_room()
+    elif room_type == "figura_743":
+        room = create_figura_743_room()
     else:
         room = create_rectangular_room(4.0, 3.0)
 
