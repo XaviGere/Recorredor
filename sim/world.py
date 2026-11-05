@@ -165,6 +165,28 @@ def create_diamond_room() -> RoomEnvironment:
     )
 
 
+def create_figura_743_room() -> RoomEnvironment:
+    return RoomEnvironment(
+        name="Galpón Escalonado (14 Paredes — Figura_743)",
+        vertices_ccw=[
+            Point2D(-1.5, 0.5),
+            Point2D(-1.0, 0.5),
+            Point2D(-1.0, 0.0),
+            Point2D(-0.5, 0.0),
+            Point2D(-0.5, -0.5),
+            Point2D(0.5, -0.5),
+            Point2D(0.5, -1.0),
+            Point2D(1.5, -1.0),
+            Point2D(1.5, -0.5),
+            Point2D(2.1, -0.5),
+            Point2D(2.1, 0.5),
+            Point2D(1.5, 0.5),
+            Point2D(1.5, 1.5),
+            Point2D(-1.5, 1.5),
+        ],
+    )
+
+
 def create_custom_room(
     vertices: List[Tuple[float, float]],
     name: str = "Figura Personalizada",
